@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Streaming</title>
+  </head>
+  <body>
+    <h1>Video Streaming Page</h1>
+    <video id="videoPlayer" controls src="Sample.m4v"></video>
+    <br />
+    <button id="playPauseBtn">Play/Pause</button>
+    <button id="seekBtn">Seek</button>
+    <input type="text" id="seekTime" placeholder="Seek Time" />
+    <button id="changeSourceBtn">Change Source</button>
+
+    <script>
+      const video = document.getElementById("videoPlayer");
+      const playPauseBtn = document.getElementById("playPauseBtn");
+      const seekBtn = document.getElementById("seekBtn");
+      const seekTime = document.getElementById("seekTime");
+      const changeSourceBtn = document.getElementById("changeSourceBtn");
+
+      playPauseBtn.addEventListener("click", () => {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+
+      seekBtn.addEventListener("click", () => {
+        const time = parseFloat(seekTime.value);
+        if (!isNaN(time)) {
+          video.currentTime = time;
+        }
+      });
+
+      changeSourceBtn.addEventListener("click", () => {
+        const newSource = prompt("Enter new video URL:");
+        if (newSource) {
+          video.src = newSource;
+        }
+      });
+    </script>
+  </body>
+</html>

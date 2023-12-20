@@ -1,33 +1,27 @@
-# Data-Communications
-Using Java[Computer Networking]
+# This practical will focus on sending electronic mail using the SMTP protocol
 
-# Data Communications Repository
+Despite the various social chat and connect applications that are available today, e-mail still
+remains a popular communication tool. Wouldn’t it be interesting to understand how some
+of the protocols behind this essential communication method work? 
 
-Welcome to the Data Communications repository! This repository is dedicated to the study of computer networking using Java.
+# This week you are being tasked to look at SMTP and build an SMTP client.
 
-## About
+Create a GUI based Java application which will act as a mail client that sends e-mail. When
+the application starts up the user must be presented with a user interface. The interface
+should allow the user to enter the host-name and port number to which they wish to connect.
+Furthermore, the GUI should contain textfields (with associated labels) for sender name,
+recipient name and a text area for the contents of the email. Finally a send button on the
+interface will allow the message to be sent. Refer to the SMTP protocol for information on
+how this is done.
+After the user has clicked send, the user will be notified on the status of the sent email. Any
+errors which occur must be displayed to the user, in a user friendly manner. Testing of the
+mail client will need to be setup. For a mail server which can be used for testing, refer to
+SMTP Bucket or Papercut (Papercut.Smtp.Setup.exe can be downloaded here). Being able
+to use SMTP Bucket or Papercut is not a requirement!
+Please note: You may NOT use the JavaMail API (javax.mail package) to complete your
+practical. Failure to code the protocol from scratch will result in receiving 0 for your practical.
 
-This repository contains practical implementations and projects related to computer networking concepts. The primary programming language used in this repository is Java.
-
-## Projects
-
-### 1. SMTP protocol
-
-The `web-server` branch includes a simple web server implementation using Java. Check out the code in the `src` directory for details.
-
-### 2. Chat Application
-
-The `web-server` branch includes a simple web server implementation using Java. Check out the code in the `src` directory for details.
-
-### 3. Web Server Implementation
-
-The `chat-application` branch contains a basic chat application demonstrating network communication with Java.
-
-## Getting Started
-
-Feel free to explore the different branches and projects within this repository. Each branch may focus on a specific aspect of computer networking.
-
-If you have any questions or suggestions, please feel free to open an issue or contribute to the repository.
-
-Happy coding!
+# Bonus
+Provide an additional attach button that also allows the user to send an attachment with
+their email. (Hint: An attachment is just DATA that is sent with an email.)
 
